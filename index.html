@@ -47,8 +47,10 @@
         </p> -->
       </div>
 
-      <!-- this form is used to get the user input -->
-    <form id="cocktail-form"></form>
+     <div class= "container">
+
+     !-- this form is used to get the user input -->
+    <form id="cocktail-form">
       <!-- these buttons will trigger our AJAX call -->
       <div class="has-text-centered">
       <input id="find-cocktail" type="submit" value="Cocktail" class="button is-danger">
@@ -56,25 +58,17 @@
       <input id="find-mood" type="submit" value="Happy" class="button is-warning">
     </div>
   </form>
-
   <br>
-
-
-
-
 <div id="test" class="has-text-centered"></div>
-  <div id="food-giphy" class="has-text-centered"></div></div>
-  <div id="mood-giphy" class="has-text-centered"></div></div>
-      <footer>
+  <div id="food-giphy" class="has-text-centered"></div>
+  <div id="cocktail-giphy" class="has-text-centered"></div>
+  <div id="mood-giphy" class="has-text-centered"></div>
+</div>  
+  <footer>
         
        
-      </footer>
-    </div>
-  </div>
-
-</div>
-
-  </div>
+  </footer>
+  
 
   <script
   src="https://code.jquery.com/jquery-3.5.1.js"
@@ -84,9 +78,7 @@
 </script>
 
 <script>
-  
-
-
+  // script for title animation
 var hotbod = document.querySelector("body");
 
 function doStuff() {
