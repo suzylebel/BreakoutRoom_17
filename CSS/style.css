@@ -5,8 +5,12 @@ html {
 
 body {
 	background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(233, 72%, 49%));
-	background-size: 400% 400%;
+	background-size: 600% 600%;
 	animation: gradient 30s ease infinite;
+}
+
+.colorwhite {
+    color: white;
 }
 
 @keyframes gradient {
