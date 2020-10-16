@@ -4,14 +4,28 @@ html {
 } */
 
 body {
-	background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(233, 72%, 49%));
+	background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(249, 50%, 20%));
 	background-size: 600% 600%;
 	animation: gradient 30s ease infinite;
+}
+
+h1.double {
+    border-style: double;
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 1rem;
+    border-color: linear-gradient(-45deg, purple, hsl(249, 50%, 20%));
+	background-size: 600% 600%;
+    animation: gradient 30s ease infinite;
+    color: gray;
+
 }
 
 .colorwhite {
     color: white;
 }
+
+
 
 @keyframes gradient {
 	0% {
@@ -146,7 +160,46 @@ span
     opacity: 1;
 
     filter: alpha(opacity=100);
+    
 }
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('put_the_location_to_your_font.ttf or .otf');
+   }
+
+.fade-in {
+    color: white;
+    font-family: 'digital-clock-font';
+    animation: fadeIn ease 30s;
+    -webkit-animation: fadeIn ease 30s;
+    -moz-animation: fadeIn ease 30s;
+    -o-animation: fadeIn ease 30s;
+    -ms-animation: fadeIn ease 30s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
 
 main {
 background-color: #b1bfd8;
