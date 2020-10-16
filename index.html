@@ -8,11 +8,97 @@
 </head>
 
 <body>
+ 
+    <div class="unbreakable-container">  
+      <div class="unbreakable has-text-centered">
+        <span class="un">The</span><span class="able"> N I G H T</span><span class="break"></span>
+      </div>
+      <div class="ks has-text-centered">PLANNER</div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="./JS/script.js">
+ 
+
+  <br>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title colorwhite">
+          COVID ruining your life?
+        </h1>
+        <h2 class="subtitle colorwhite">
+          We've got you covered!
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    
+<div class="columns ">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <div class="card ">
+      <div class="card-content">
+        <p class= "here has-text-centered is-primary is-bold">
+          The Night Planner is here to make you evenings a little more spiffy!
+        </p>
+        <!-- <p class="subtitle ">
+          We'e got cocktail reccomendations, recipes, and giphy's to make you nights more bearable.  
+        </p> -->
+      </div>
+
+      <!-- this form is used to get the user input -->
+    <form id="cocktail-form"></form>
+      <!-- these buttons will trigger our AJAX call -->
+      <div class="has-text-centered">
+      <input id="find-cocktail" type="submit" value="Cocktail" class="button is-danger">
+      <input id="find-food" type="submit" value="Food" class="button is-info">
+      <input id="find-mood" type="submit" value="Happy" class="button is-warning">
+    </div>
+  </form>
+
+  <br>
+
+
+
+
+<div id="test" class="has-text-centered"></div>
+  <div id="food-giphy" class="has-text-centered"></div></div>
+  <div id="mood-giphy" class="has-text-centered"></div></div>
+      <footer>
+        
+       
+      </footer>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script src="./JS/script.js"> 
 </script>
+
+<script>
+  
+
+
+var hotbod = document.querySelector("body");
+
+function doStuff() {
+    hotbod.className += " animate";
+}
+
+window.onload = function() {
+    doStuff();
+};
+
+</script>
+
 
 </body>
 
