@@ -3,10 +3,11 @@ html {
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 } */
 
-body, footer {
-	background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(249, 50%, 20%));
-	background-size: 600% 600%;
-	animation: gradient 30s ease infinite;
+body,
+footer {
+    background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(249, 50%, 20%));
+    background-size: 600% 600%;
+    animation: gradient 30s ease infinite;
 }
 
 
@@ -18,7 +19,7 @@ h1.double {
     border-radius: 5px;
     padding: 1rem;
     border-color: linear-gradient(-45deg, purple, hsl(249, 50%, 20%));
-	background-size: 600% 600%;
+    background-size: 600% 600%;
     animation: gradient 30s ease infinite;
     color: gray;
 
@@ -27,10 +28,11 @@ h1.double {
 .colorwhite {
     color: white;
 }
+
 /* 
 #recipeSite {
     font-family: '
-    color: navy;
+color: navy;
     font-size: medium;
 } */
 
@@ -39,15 +41,17 @@ h1.double {
 
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -57,15 +61,13 @@ h1.double {
 background-image: linear-gradient(315deg, #2f4353 0%, gray 74%);
 } */
 
-.unbreakable-container
-{
+.unbreakable-container {
     /* position: absolute; */
     bottom: 10px;
     left: 20px;
 }
 
-.unbreakable
-{
+.unbreakable {
     font-family: 'Anton', sans-serif;
     line-height: 1;
 
@@ -74,8 +76,7 @@ background-image: linear-gradient(315deg, #2f4353 0%, gray 74%);
     color: white;
 }
 
-.ks
-{
+.ks {
     font-family: 'Anton', sans-serif;
     font-size: 45px;
     line-height: 1;
@@ -83,25 +84,23 @@ background-image: linear-gradient(315deg, #2f4353 0%, gray 74%);
     margin-top: -11px;
 
     -webkit-transition: all .1s ease-in-out;
-            transition: all .1s cubic-bezier(.190, 1.000, .220, 1.000) 3s;
+    transition: all .1s cubic-bezier(.190, 1.000, .220, 1.000) 3s;
     -webkit-transform: translateX(-1000%);
-        -ms-transform: translateX(-1000%);
-            transform: translateX(-1000%);
+    -ms-transform: translateX(-1000%);
+    transform: translateX(-1000%);
     letter-spacing: -1px;
     text-transform: uppercase;
 
     color: black;
 }
 
-.animate .ks
-{
+.animate .ks {
     -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
 }
 
-span
-{
+span {
     font-family: 'Anton', Helvetica, sans-serif;
     font-size: 40px;
 
@@ -113,70 +112,65 @@ span
     filter: alpha(opacity=0);
 }
 
-.able
-{
+.able {
     -webkit-transition: all .1s cubic-bezier(.190, 1.000, .220, 1.000) 2.3s;
-            transition: all .1s cubic-bezier(.190, 1.000, .220, 1.000) 2.3s;
+    transition: all .1s cubic-bezier(.190, 1.000, .220, 1.000) 2.3s;
     letter-spacing: -.07em;
 }
 
-.break
-{
+.break {
     -webkit-transition: all .2s ease-in-out 2s;
-            transition: all .2s ease-in-out 2s;
+    transition: all .2s ease-in-out 2s;
     letter-spacing: -.07em;
 }
 
-.un
-{
+.un {
     -webkit-transition: all .3s ease-in-out 1.7s;
-            transition: all .3s ease-in-out 1.7s;
+    transition: all .3s ease-in-out 1.7s;
     letter-spacing: -.07em;
 }
 
-.animate .un
-{
+.animate .un {
     font-size: 40px;
 
-    -webkit-transform: scale(1.5,1.5);
-        -ms-transform: scale(1.5,1.5);
-            transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
 
     opacity: 1;
 
     filter: alpha(opacity=100);
 }
 
-.animate .break
-{
+.animate .break {
     font-size: 60px;
 
-    -webkit-transform: scale(1.5,1.5);
-        -ms-transform: scale(1.5,1.5);
-            transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
 
     opacity: 1;
 
     filter: alpha(opacity=100);
 }
 
-.animate .able
-{
+.animate .able {
     font-size: 80px;
 
-    -webkit-transform: scale(1.5,1.5);
-        -ms-transform: scale(1.5,1.5);
-            transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5, 1.5);
+    -ms-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
 
     opacity: 1;
 
     filter: alpha(opacity=100);
-    
+
 }
-@font-face{
-    font-family:'digital-clock-font';
+
+@font-face {
+    font-family: 'digital-clock-font';
     src: url('put_the_location_to_your_font.ttf or .otf');
-   }
+}
 
 .fade-in {
     color: white;
@@ -186,47 +180,69 @@ span
     -moz-animation: fadeIn ease 30s;
     -o-animation: fadeIn ease 30s;
     -ms-animation: fadeIn ease 30s;
-    }
-    @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-    
-    @-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
-
-main {
-background-color: #b1bfd8;
-background-image: linear-gradient(315deg, #b1bfd8 0%, hsl(219, 50%, 27%) 74%);
 }
 
-Resources
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
 
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
-h1 {
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    background-color: #b1bfd8;
+    background-image: linear-gradient(315deg, #b1bfd8 0%, hsl(219, 50%, 27%) 74%);
+}
+
+Resources h1 {
     color: gray;
 }
 
 .here {
-background-color: black;
+    background-color: black;
 }
 
 p {
@@ -234,6 +250,53 @@ p {
     font-size: medium;
 }
 
+/* joel - I added styling here for the night planner time slots. these were taken from hw5 just to get it to show nicely on the page. this will need changing later */
+.timeSlotRow {
+    white-space: pre-wrap;
+    height: 50px;
+}
+
+.timeSlotHourColumn {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+}
+
+.past {
+    background-color: #d3d3d3;
+    border: 1px solid white;
+}
+
+.future {
+    background-color: #77dd77;
+    border: 1px solid white;
+}
+
+.present {
+    background-color: #ff6961;
+    border: 1px solid white;
+}
+
+textarea {
+    background: transparent;
+    resize: none;
+    border: none;
+    color: #000000;
+    width: 100%;
+}
+
+.saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #06AED5;
+    color: white;
+}
+
+.notesSlotRow {
+    white-space: pre-wrap;
+    height: 200px;
+}
 
 #cocktail-thumbnail {
     height: 128px;
@@ -249,12 +312,4 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-
 }
-
-
-
-
-/* 
-*/
-
