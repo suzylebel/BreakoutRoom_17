@@ -1,101 +1,53 @@
 
-$( document ).ready(function() {
+    
+    $(document).ready(function() {// moment ().format
+        function currentheaderDate() {
+            var currentDay = moment().format('dddd');
+            $("#currentDayOf").text("Today is: " + currentDay);
+            var currentTime = moment().format('h:mm A');
+            $("#currentDay").text("It is " + currentTime);
+            
 
-  var drinkIDs = [11001,11003,11006,11007,11008,11728,12196,11844,17198,17211,17255];
-  var modalEl = $("#cocktail-modal");
-  var btnEl = $("#find-cocktail");
-  var containerEl = $("#cocktail-container");
+        }
+        
+        currentheaderDate();
 
-  btnEl.on("click", function(event) {
+// giphy api
+
+// event listeners for cocktail and food buttons
+$("#find-cocktail").on("click", searchProduct);
+$("#find-food").on("click", searchProduct);
+$("#find-mood").on("click", searchProduct);
+// function to search for a random giphy based off of what the product is, in this case cocktails or food 
+function searchProduct(event) {
     event.preventDefault();
-  
-    var queryCtURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkIDs[randomIndex(drinkIDs.length)];
-
-    $.ajax({ 
-      url: queryCtURL,
-      method: "GET"
-    })
-      .then(function(cocktailData) {
-        console.log(cocktailData);
-        var info = cocktailData.drinks[0];
-        modalEl.addClass("is-active"); 
-        containerEl.empty();
-
-        $("#cocktail-name").text(info.strDrink);
-        if (info.strDrinkThumb) {
-          $("#cocktail-thumbnail").attr("src", info.strDrinkThumb);
+    console.log(event.target.value);
+    console.log("function invoked");
+    let searchItem = event.target.value;
+    let APIKey = "GYo1Mdaf1E5B3knaTHWgaW01cgg9CMRp";
+    let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchItem + "&api_key=" + APIKey + "&limit=50";
+    // make ajax call 
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        // check the response 
+        console.log(response);
+        // use Math.random() to choose a random giphy
+        let randomIndex = Math.floor(Math.random() * 50);
+        console.log("Random index: " + randomIndex);
+        testURL = response.data[randomIndex].images.fixed_height.url;
+        // the following ids are test ids to append the images to the html. make sure these ids are changed to whatever is used in the main index.html
+        if (searchItem === "Cocktail") {
+            $("#cocktail-giphy").empty();
+            $("#cocktail-giphy").append($("<img>").attr("src", testURL));
+        } else if (searchItem === "Food") {
+            $("#food-giphy").empty();
+            $("#food-giphy").append($("<img>").attr("src", testURL));
+        } else if (searchItem === "Happy") {
+            $("#mood-giphy").empty();
+            $("#mood-giphy").append($("<img>").attr("src", testURL));
         }
-        
-        var iList = $("<ul>");
-        var ingr = [];
-        ingr[0] = $("<li>").text(info.strMeasure1 + " " + info.strIngredient1);
-        ingr[1] = $("<li>").text(info.strMeasure2 + " " + info.strIngredient2);
-        if (info.strIngredient3) {
-          if (info.strMeasure3) {
-          ingr[2] = $("<li>").text(info.strMeasure3 + " " + info.strIngredient3);
-          } else {
-            ingr[2] = $("<li>").text(info.strIngredient3);
-          }
-          if (info.strIngredient4) {
-            if (info.strMeasure4) {
-            ingr[3] = $("<li>").text(info.strMeasure4 + " " + info.strIngredient4);
-            } else {
-              ingr[3] = $("<li>").text(info.strIngredient4)
-            }
-            if (info.strIngredient5) {
-              if (info.strMeasure5) {
-                ingr[4] = $("<li>").text(info.strMeasure5 + " " + info.strIngredient5);
-              } else {
-                ingr[4] = $("<li>").text(info.strIngredient5)
-              }
-              if (info.strIngredient6) {
-                if (info.strMeasure6) {
-                  ingr[5] = $("<li>").text(info.strMeasure6 + " " + info.strIngredient6);
-                } else {
-                  ingr[5] = $("<li>").text(info.strIngredient6)
-                }
-              }
-            }
-          }
-        }
-        for (let i = 0; i < ingr.length; i++) {
-          iList.append(ingr[i]);
-        }
-        containerEl.append(iList);
-        containerEl.append("<br>");
-        
-        if (info.strInstructions) {
-          var inst = $("<p>").text(info.strInstructions);
-          containerEl.append(inst);
-          containerEl.append("<br>");
-        }
-        if (info.strVideo) {
-          var video = $("<iframe>");
-          video.attr("width", "560");
-          video.attr("height", "315");
-          video.attr("src", info.strVideo);
-          video.attr("samesite", "None");
-          video.attr("samesite", "Secure");
-          containerEl.append(video);
-        }
-
-
     });
-
-  })
-   
-   
-   
-  $(".close").click(function() {
-   
-    $("#cocktail-modal").removeClass("is-active");
-  
-  });
-
-  function randomIndex(n) {
-    return Math.floor(Math.random() * parseInt(n));
-  }
-
-
-
-});
+}
+})
