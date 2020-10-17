@@ -1,3 +1,14 @@
+// $(document).ready(function () { // moment ().format
+//     function currentheaderDate() {
+//         var currentDay = moment().format('dddd');
+//         $("#currentDayOf").text("Today is: " + currentDay);
+//         var currentTime = moment().format('h:mm A');
+//         $("#currentDay").text("It is " + currentTime);
+//     }
+// });
+
+// currentheaderDate();
+
 // giphy api
 // event listeners for cocktail and food buttons
 $("#find-cocktail").on("click", searchProduct);
