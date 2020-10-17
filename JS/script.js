@@ -1,3 +1,17 @@
+
+    
+    $(document).ready(function() {// moment ().format
+        function currentheaderDate() {
+            var currentDay = moment().format('dddd');
+            $("#currentDayOf").text("Today is: " + currentDay);
+            var currentTime = moment().format('h:mm A');
+            $("#currentDay").text("It is " + currentTime);
+            
+
+        }
+        
+        currentheaderDate();
+
 // giphy api
 
 // event listeners for cocktail and food buttons
@@ -36,4 +50,4 @@ function searchProduct(event) {
         }
     });
 }
-// trying to use the embed_url throws a CORB error in the console -- do not use response.data[0].embed_url
+})

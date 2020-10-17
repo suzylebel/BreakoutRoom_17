@@ -15,23 +15,35 @@
       </div>
       <div class="ks has-text-centered">PLANNER</div>
     </div>
+    <div class="point"></div>
 
- 
+    
+    <br>
 
-  <br>
+    
+      
+     <h1 id="currentDayOf"  class="has-text-centered fade-in"></h1>
+        <h1 id="currentDay" class="has-text-centered fade-in"></h1>
+  
 
-  <section class="hero">
+  <section class="hero fade-in">
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title colorwhite">
-          COVID ruining your life?
+      <div class="container ">
+        <h1 class="title colorwhite has-text-centered double round1">
+       Don't Let COVID Ruin Your Evening Plans....
         </h1>
-        <h2 class="subtitle colorwhite">
-          We've got you covered!
+        <br>
+        <h2 class="subtitle colorwhite has-text-centered">
+          We've Got YOU covered!
         </h2>
       </div>
     </div>
   </section>
+
+  <br>
+  <br>
+  <br>
+  <br>
 
   <div class="container">
     
@@ -40,7 +52,7 @@
     <div class="card ">
       <div class="card-content">
         <p class= "here has-text-centered is-primary is-bold">
-          The Night Planner is here to make you evenings a little more spiffy!
+          The Night Planner is here to make you evenings a little more spiffy!!!!
         </p>
         <!-- <p class="subtitle ">
           We'e got cocktail reccomendations, recipes, and giphy's to make you nights more bearable.  
@@ -49,7 +61,7 @@
 
      <div class= "container">
 
-     !-- this form is used to get the user input -->
+    
     <form id="cocktail-form">
       <!-- these buttons will trigger our AJAX call -->
       <div class="has-text-centered">
@@ -63,20 +75,49 @@
   <div id="food-giphy" class="has-text-centered"></div>
   <div id="cocktail-giphy" class="has-text-centered"></div>
   <div id="mood-giphy" class="has-text-centered"></div>
+  <h1 id="recipeName" class="has-text-centered"></h1>
+  <div id="mealPic" class="has-text-centered"></div>
+  <div id="recipeSite" class="has-text-centered"></div>
+  <div id="cocktail-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="cocktail-name"></h2>
+      <br>
+      <img src="" id="cocktail-thumbnail" />
+      <br>
+      <div id="cocktail-container"></div>
+    </div>
+  </div>
 </div>  
-  <footer>
-    <h1 id="recipeName"></h1>
-    <div id="mealPic"></div>
-    <div id="recipeSite"></div>
-       
-  </footer>
-  
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js"
+<!-- 
+<br>
+<br>
+<br>
+<br> -->
+
+<!-- <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>The Night Planner</strong>
+      By Joel, Suzy, Joey & Andrew.
+    </p>
+  </div>
+</footer> -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
-<script src="./JS/script.js"></script>
-<script src="./JS/scriptM.js"></script>
+<script src="./JS/script.js"> 
+</script>
+<script src="./JS/scriptM.js"> 
+</script>
+<script src="./JS/cocktail.js"> 
+</script>
+
 <script>
   // script for title animation
 var hotbod = document.querySelector("body");
