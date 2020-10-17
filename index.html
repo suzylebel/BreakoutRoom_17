@@ -4,6 +4,7 @@
 <head>
     <title>THE NIGHT PLANNER</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
@@ -72,81 +73,90 @@
                                 <input id="find-food" type="submit" value="Food" class="button is-info">
                                 <input id="find-mood" type="submit" value="Happy" class="button is-warning">
                             </div>
-                        </form>
-                        <br>
-                        <div id="test" class="has-text-centered"></div>
-                        <div id="food-giphy" class="has-text-centered"></div>
-                        <div id="cocktail-giphy" class="has-text-centered"></div>
-                        <div id="mood-giphy" class="has-text-centered"></div>
-                        <h1 id="recipeName" class="has-text-centered"></h1>
-                        <div id="mealPic" class="has-text-centered"></div>
-                        <div id="recipeSite" class="has-text-centered"></div>
-                        <div id="cocktail-modal" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <h2 id="cocktail-name"></h2>
-                                <br>
-                                <img src="" id="cocktail-thumbnail" />
-                                <br>
-                                <div id="cocktail-container"></div>
-                            </div>
+                    </div>
+                    </form>
+                    <br>
+                    <div id="test" class="has-text-centered"></div>
+                    <div id="food-giphy" class="has-text-centered"></div>
+                    <div id="cocktail-giphy" class="has-text-centered"></div>
+                    <div id="mood-giphy" class="has-text-centered"></div>
+                    <h1 id="recipeName" class="has-text-centered"></h1>
+                    <div id="mealPic" class="has-text-centered"></div>
+                    <div id="recipeSite" class="has-text-centered"></div>
+                    <div id="cocktail-modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 id="cocktail-name"></h2>
+                            <br>
+                            <img src="" id="cocktail-thumbnail" />
+                            <br>
+                            <div id="cocktail-container"></div>
                         </div>
                     </div>
+                </div>
 
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <div class="columns">
-                        <!-- test <div> to put night planner time slots -->
-
-                        <div class="column" id="time-slots">
-                            <div class="column colorwhite is-offset-2" <p id="currentDay">
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- test <div> to put night planner notes -->
-                        <div class="column" id="notes">
-                            <div class="column colorwhite"></div>
+                <div>
+                    <div>
+                        <div>
+                            <br>
                         </div>
                     </div>
+                </div>
 
-                    <footer class="footer">
-                        <div class="content has-text-centered">
-                            <p>
-                                <strong>The Night Planner</strong>
-                                By Joel, Suzy, Joey & Andrew.
+                <!-- 
+<br>
+<br>
+<br>
+<br> -->
+
+                <div class="columns">
+                    <!-- test <div> to put night planner time slots -->
+
+                    <div class="column" id="time-slots">
+                        <div class="column colorwhite is-offset-2" <p id="currentDay">
                             </p>
                         </div>
-                    </footer>
+                    </div>
 
-                    <script src="https://code.jquery.com/jquery-3.5.1.js"
-                        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
-                    </script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-                    <script src="./JS/script.js">
-                    </script>
-                    <script src="./JS/scriptM.js">
-                    </script>
-                    <script src="./JS/cocktail.js">
-                    </script>
+                    <!-- test <div> to put night planner notes -->
+                    <div class="column" id="notes">
+                        <div class="column colorwhite"></div>
+                    </div>
+                </div>
 
-                    <script>
-                        // script for title animation
-                        var hotbod = document.querySelector("body");
 
-                        function doStuff() {
-                            hotbod.className += " animate";
-                        }
+                <footer class="footer">
+                    <div class="content has-text-centered">
+                        <p>
+                            <strong>The Night Planner</strong>
+                            By Joel, Suzy, Joey & Andrew.
+                        </p>
+                    </div>
+                </footer>
 
-                        window.onload = function () {
-                            doStuff();
-                        };
-                    </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.5.1.js"
+                    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+                <script src="./JS/script.js">
+                </script>
+                <script src="./JS/scriptM.js">
+                </script>
+                <script src="./JS/cocktail.js">
+                </script>
+
+                <script>
+                    // script for title animation
+                    var hotbod = document.querySelector("body");
+
+                    function doStuff() {
+                        hotbod.className += " animate";
+                    }
+
+                    window.onload = function () {
+                        doStuff();
+                    };
+                </script>
 
 
 </body>

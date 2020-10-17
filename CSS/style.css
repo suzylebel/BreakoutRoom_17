@@ -3,11 +3,15 @@ html {
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 } */
 
-body {
+body,
+footer {
     background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(249, 50%, 20%));
     background-size: 600% 600%;
     animation: gradient 30s ease infinite;
 }
+
+
+
 
 h1.double {
     border-style: double;
