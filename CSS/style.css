@@ -3,13 +3,24 @@ html {
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 } */
 
-body,
-footer {
+body {
     background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(249, 50%, 20%));
     background-size: 600% 600%;
     animation: gradient 30s ease infinite;
 }
 
+.footer {
+    background-color: #fafafa;
+    padding: 1rem 1rem 1rem;
+}
+footer {
+    background: linear-gradient(-45deg, #2f4353, #2f4353, gray, hsl(249, 50%, 20%));
+    background-size: 600% 600%;
+    animation: gradient 30s ease infinite;
+
+   
+
+}
 
 
 
@@ -22,6 +33,7 @@ h1.double {
     background-size: 600% 600%;
     animation: gradient 30s ease infinite;
     color: gray;
+    margin-inline: 20px;
 
 }
 
@@ -237,6 +249,12 @@ main {
     background-image: linear-gradient(315deg, #b1bfd8 0%, hsl(219, 50%, 27%) 74%);
 }
 
+.randombutton {
+    background-color: #b1bfd8;
+    background-image: linear-gradient(315deg, #007399 20%, hsl(180, 50%, 27%) 74%);
+
+}
+
 Resources h1 {
     color: gray;
 }
@@ -259,7 +277,7 @@ p {
 .timeSlotHourColumn {
     background-color: #ffffff;
     color: #000000;
-    border-top: 1px dashed #000000;
+    border-top: 1px solid #000000;
 }
 
 .past {
@@ -268,8 +286,10 @@ p {
 }
 
 .future {
-    background-color: #77dd77;
+    
     border: 1px solid white;
+    background-color: linear-gradient(-45deg, green, darkgreen, rgb(115, 157, 119), #(249, 50%, 20%));
+    animation: gradient 10s ease infinite;
 }
 
 .present {
@@ -281,15 +301,16 @@ textarea {
     background: transparent;
     resize: none;
     border: none;
-    color: #000000;
+    color: white;
     width: 100%;
 }
 
 .saveBtn {
-    border-left: 1px solid black;
+    
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    border-top-right-radius: 15px;
+    background-color: #002e4d;
     color: white;
 }
 
@@ -312,4 +333,19 @@ textarea {
     width: 100%;
     height: 100%;
     overflow: auto;
+    
 }
+
+
+.timeSlotHourColumn {
+    
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border: 3px solid #000;
+    font-size: smaller;
+    align-content: flex-end;
+    padding: 1px;
+
+
+} 
