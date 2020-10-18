@@ -18,7 +18,7 @@ function searchProduct(event) {
     console.log("function invoked");
     let searchItem = event.target.value;
     let APIKey = "GYo1Mdaf1E5B3knaTHWgaW01cgg9CMRp";
-    let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchItem + "&api_key=" + APIKey + "&limit=50";
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchItem + "&api_key=" + APIKey + "&limit=50";
     // make ajax call 
     $.ajax({
         url: queryURL,
