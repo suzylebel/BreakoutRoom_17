@@ -56,7 +56,7 @@ function nightPlannerTimeSlots() {
         newRow.addClass("columns timeSlotRow");
         // hourColumn
         let hourColumn = $("<div>");
-        hourColumn.addClass("column is-1 is-offset-1 timeSlotHourColumn");
+        hourColumn.addClass("column is-2 is-offset-1 timeSlotHourColumn");
         // if statements to determine the hour column text using index i. The work-hour attribute set here is used later in the code to determine if the row is in the past, present, or future
         if (i < 6) {
             hourColumn.text(i + 6 + "PM");
@@ -71,7 +71,7 @@ function nightPlannerTimeSlots() {
 
         // inputColumn
         let inputColumn = $("<div>");
-        inputColumn.addClass("column is-5");
+        inputColumn.addClass("column is-7");
         // get the current hour in 24-hour format from https://momentjs.com/ so it can be compared with the work-hour attribute to determine whether the row is in the past, present, or future
         let current24Hour = moment().format("H");
         let current12Hour = parseInt(hourColumn.attr("work-hour"));
@@ -98,7 +98,7 @@ function nightPlannerTimeSlots() {
 
         // saveButtonColumn
         let saveButton = $("<button>");
-        saveButton.addClass("column is-1 saveBtn");
+        saveButton.addClass("column is-2 saveBtn");
         saveButton.attr("button-data-index", i);
         let saveButtonIcon = $("<i>");
         saveButtonIcon.addClass("far fa-save");
@@ -123,11 +123,11 @@ function notesSection() {
     notesRow.addClass("columns");
     // hourColumn
     let hourColumn = $("<div>");
-    hourColumn.addClass("column is-1 timeSlotHourColumn notesSlotRow is-vcentered");
+    hourColumn.addClass("column is-2 timeSlotHourColumn notesSlotRow is-vcentered");
     hourColumn.text("Notes");
     // inputColumn
     let notesColumn = $("<div>");
-    notesColumn.addClass("column is-5 present");
+    notesColumn.addClass("column is-6 present");
     // form for user input
     let userInputForm = $("<form>");
     let userInputText = $("<textarea>");
@@ -145,7 +145,7 @@ function notesSection() {
     }
     // saveButtonColumn
     let saveButton = $("<button>");
-    saveButton.addClass("column is-1 saveBtn notesSlotRow");
+    saveButton.addClass("column is-2 saveBtn notesSlotRow");
     saveButton.attr("button-data-index", "notes");
     let saveButtonIcon = $("<i>");
     saveButtonIcon.addClass("far fa-save");
