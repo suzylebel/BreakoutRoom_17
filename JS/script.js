@@ -14,8 +14,8 @@ $("#find-mood").on("click", searchProduct);
 // function to search for a random giphy based off of what the product is, in this case cocktails or food 
 function searchProduct(event) {
     event.preventDefault();
-    console.log(event.target.value);
-    console.log("function invoked");
+    // console.log(event.target.value);
+    // console.log("function invoked");
     let searchItem = event.target.value;
     let APIKey = "GYo1Mdaf1E5B3knaTHWgaW01cgg9CMRp";
     let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchItem + "&api_key=" + APIKey + "&limit=50";
@@ -25,10 +25,10 @@ function searchProduct(event) {
         method: "GET"
     }).then(function (response) {
         // check the response 
-        console.log(response);
+        // console.log(response);
         // use Math.random() to choose a random giphy
         let randomIndex = Math.floor(Math.random() * 50);
-        console.log("Random index: " + randomIndex);
+        // console.log("Random index: " + randomIndex);
         testURL = response.data[randomIndex].images.fixed_height.url;
         // the following ids are test ids to append the images to the html. make sure these ids are changed to whatever is used in the main index.html
         if (searchItem === "Cocktail") {
