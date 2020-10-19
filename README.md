@@ -10,12 +10,13 @@ Powerpoint [presentation](https://docs.google.com/presentation/d/1kHslFU9VMagozC
 ## Table of Contents
 1. [User story](#User-story)
 2. [About the Project](#About-the-Project)
-3. [Tech/Framework used](#Tech-Used)
-4. [Code Breakdown](Code-Breakdown)
-5. [UI](#UI)
-6. [License](#License)
-7. [Contact](#Contact)
-8. [Credits](#Credit)
+3. [Screenshots](#Screenshots)
+4. [Tech/Framework used](#Tech-Used)
+5. [Code Breakdown](Code-Breakdown)
+6. [UI](#UI)
+7. [License](#License)
+8. [Contact](#Contact)
+9. [Credits](#Credit)
 
 ## User Story
 
