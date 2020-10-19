@@ -123,7 +123,7 @@ function notesSection() {
     notesRow.addClass("columns");
     // hourColumn
     let hourColumn = $("<div>");
-    hourColumn.addClass("column is-2 timeSlotHourColumn notesSlotRow is-vcentered");
+    hourColumn.addClass("column is-2 timeSlotHourColumn has-text-centered notesSlotRow is-vcentered");
     hourColumn.text("Notes");
     // inputColumn
     let notesColumn = $("<div>");

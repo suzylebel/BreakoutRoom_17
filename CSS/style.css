@@ -334,6 +334,17 @@ textarea {
     width: 128px;
 }
 
+.is-danger {
+    background-color: #b1bfd8;
+    background-image: linear-gradient(200deg, #007399 40%, hsl(180, 60%, 27%) 60%);
+}
+
+.is-info {
+    background-color: #b1bfd8;
+    background-image: linear-gradient(-200deg, #007399 40%, hsl(180, 60%, 27%) 60%);
+
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -351,7 +362,7 @@ textarea {
     
     width: 50px;
     height: 50px;
-    background: #ccc;
+    background: transparent;
     border: 3px solid #000;
     font-size: smaller;
     align-content: flex-end;
