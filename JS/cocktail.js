@@ -6,7 +6,6 @@ $( document ).ready(function() {
   var btnEl = $("#find-cocktail");
   var containerEl = $("#cocktail-container");
 
-  // event listener for cocktail button
   btnEl.on("click", function(event) {
     event.preventDefault();
   
@@ -27,7 +26,6 @@ $( document ).ready(function() {
           $("#cocktail-thumbnail").attr("src", info.strDrinkThumb);
         }
         
-        // display ingredients
         var iList = $("<ul>");
         var ingr = [];
         ingr[0] = $("<li>").text(info.strMeasure1 + " " + info.strIngredient1);
@@ -65,7 +63,6 @@ $( document ).ready(function() {
         }
         containerEl.append(iList);
         containerEl.append("<br>");
-        
         // display how-to if exists
         if (info.strInstructions) {
           var inst = $("<p>").text(info.strInstructions);
