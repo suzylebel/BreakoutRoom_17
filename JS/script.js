@@ -88,7 +88,7 @@ function nightPlannerTimeSlots() {
         saveButton.addClass("column is-2 saveBtn");
         saveButton.attr("button-data-index", i);
         let saveButtonIcon = $("<i>");
-        saveButtonIcon.addClass("far fa-save");
+        saveButtonIcon.addClass("fas fa-glass-martini");
         saveButtonIcon.attr({
             "button-data-index": i,
             style: "font-size:20px"
@@ -110,7 +110,7 @@ function notesSection() {
     notesRow.addClass("columns");
     // hourColumn
     let hourColumn = $("<div>");
-    hourColumn.addClass("column is-2 timeSlotHourColumn notesSlotRow is-vcentered");
+    hourColumn.addClass("column is-2 timeSlotHourColumn has-text-centered notesSlotRow is-vcentered");
     hourColumn.text("Notes");
     // inputColumn
     let notesColumn = $("<div>");
@@ -135,10 +135,10 @@ function notesSection() {
     saveButton.addClass("column is-2 saveBtn notesSlotRow");
     saveButton.attr("button-data-index", "notes");
     let saveButtonIcon = $("<i>");
-    saveButtonIcon.addClass("far fa-save");
+    saveButtonIcon.addClass("fas fa-pizza-slice");
     saveButtonIcon.attr({
         "button-data-index": "notes",
-        style: "font-size:20px"
+        style: "font-size:40px"
     });
     // append the icon to the button
     saveButton.append(saveButtonIcon);
