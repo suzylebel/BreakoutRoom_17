@@ -1,3 +1,4 @@
+// when the page loads, show current date and time 
 $(document).ready(function () {
     // moment ().format
     var currentDay = moment().format('dddd');
@@ -10,12 +11,9 @@ $(document).ready(function () {
 // event listeners for cocktail and food buttons
 $("#find-cocktail").on("click", searchProduct);
 $("#find-food").on("click", searchProduct);
-$("#find-mood").on("click", searchProduct);
 // function to search for a random giphy based off of what the product is, in this case cocktails or food 
 function searchProduct(event) {
     event.preventDefault();
-    // console.log(event.target.value);
-    // console.log("function invoked");
     let searchItem = event.target.value;
     let APIKey = "GYo1Mdaf1E5B3knaTHWgaW01cgg9CMRp";
     let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchItem + "&api_key=" + APIKey + "&limit=50";
@@ -24,11 +22,8 @@ function searchProduct(event) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        // check the response 
-        // console.log(response);
         // use Math.random() to choose a random giphy
         let randomIndex = Math.floor(Math.random() * 50);
-        // console.log("Random index: " + randomIndex);
         testURL = response.data[randomIndex].images.fixed_height.url;
         // the following ids are test ids to append the images to the html. make sure these ids are changed to whatever is used in the main index.html
         if (searchItem === "Cocktail") {
@@ -37,14 +32,9 @@ function searchProduct(event) {
         } else if (searchItem === "Food") {
             $("#food-giphy").empty();
             $("#food-giphy").append($("<img>").attr("src", testURL));
-        } else if (searchItem === "Happy") {
-            $("#mood-giphy").empty();
-            $("#mood-giphy").append($("<img>").attr("src", testURL));
         }
     });
 }
-// trying to use the embed_url throws a CORB error in the console -- do not use response.data[0].embed_url
-
 // night planner time slots 
 function nightPlannerTimeSlots() {
     // get the current day and time from https://momentjs.com/ and display it to the user
@@ -68,7 +58,6 @@ function nightPlannerTimeSlots() {
             hourColumn.text(i - 6 + "AM");
             hourColumn.attr("work-hour", i - 6);
         }
-
         // inputColumn
         let inputColumn = $("<div>");
         inputColumn.addClass("column is-7");
@@ -82,7 +71,6 @@ function nightPlannerTimeSlots() {
         } else {
             inputColumn.addClass("present");
         }
-
         // form for user input
         let userInputForm = $("<form>");
         let userInputText = $("<textarea>");
@@ -95,7 +83,6 @@ function nightPlannerTimeSlots() {
         } else {
             userInputText.text(localStorage.getItem(i));
         }
-
         // saveButtonColumn
         let saveButton = $("<button>");
         saveButton.addClass("column is-2 saveBtn");
@@ -116,7 +103,7 @@ function nightPlannerTimeSlots() {
     // save button event listener. this listener is put specifically on the button element so event delegation can be used to also handle if the user clicks on the icon, which is a child of the button element
     $("button").on("click", saveButtonHandler);
 }
-
+// this function creates a notes section that will take user input and save it to localStorage when the save button is clicked
 function notesSection() {
     // new row
     let notesRow = $("<div>");
@@ -161,7 +148,6 @@ function notesSection() {
     $("#notes").append(notesRow);
     $("button").on("click", saveButtonHandler);
 }
-
 // this function handles the click event, whether it be on the icon or the blue area around the icon. this function uses an if statement to determine what the user pressed (blue area or icon) and saves the user's input to local storage using DOM traversal
 function saveButtonHandler(event) {
     event.preventDefault();
@@ -175,6 +161,6 @@ function saveButtonHandler(event) {
         localStorage.setItem(buttonIndex, textInput);
     }
 }
-
+// invoke functions when page loads
 nightPlannerTimeSlots();
 notesSection();
