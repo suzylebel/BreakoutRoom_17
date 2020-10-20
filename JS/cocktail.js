@@ -71,21 +71,26 @@ $( document ).ready(function() {
         }
         if (info.strVideo) {
           var video = $("<iframe>");
+          var str = info.strVideo.split("=");
+          var videoURL = "https://www.youtube.com/embed/" + str[1];
           video.attr("width", "560");
           video.attr("height", "315");
-          video.attr("src", info.strVideo);
+          video.attr("src", videoURL);
           containerEl.append(video);
-        }
+}
 
 
     });
 
   })
+  
+  $("#close-modal").click(function() {
+    $("#cocktail-modal").removeClass("is-active");
+  });
    
    
    
   $(".close").click(function() {
-   
     $("#cocktail-modal").removeClass("is-active");
   
   });
