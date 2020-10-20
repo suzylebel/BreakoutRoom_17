@@ -299,6 +299,7 @@ p {
 .past {
     background-color: #d3d3d3;
     border: 1px solid white;
+    color: black;
 }
 
 .future {
