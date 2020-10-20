@@ -162,10 +162,9 @@ span {
 
 }
 
-@font-face {
+/* @font-face {
     font-family: 'digital-clock-font';
-    src: url('put_the_location_to_your_font.ttf or .otf');
-}
+} */
 
 .fade-in {
     color: white;
@@ -302,6 +301,11 @@ p {
     color: black;
 }
 
+h3 {
+    color: white;
+    border: 2px black;
+}
+
 .future {
     
     border: 1px solid white;
@@ -318,8 +322,12 @@ textarea {
     background: transparent;
     resize: none;
     border: none;
-    color: white;
+    color: black;
     width: 100%;
+}
+
+.day {
+    font-size: medium;
 }
 
 .saveBtn {
@@ -366,6 +374,15 @@ textarea {
     background-image: linear-gradient(-200deg, #007399 40%, hsl(180, 60%, 27%) 60%);
 
 }
+
+a:link {
+    text-decoration: none;
+  }
+
+/* #recipeName {
+    color: white;
+    background-color: black;
+} */
 
 .modal {
     display: none;
