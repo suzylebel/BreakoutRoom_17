@@ -151,6 +151,7 @@ function notesSection() {
 // this function handles the click event, whether it be on the icon or the blue area around the icon. this function uses an if statement to determine what the user pressed (blue area or icon) and saves the user's input to local storage using DOM traversal
 function saveButtonHandler(event) {
     event.preventDefault();
+    console.log(event.target);
     if (event.target.matches("i")) {
         var buttonIndex = event.target.getAttribute("button-data-index");
         var textInput = event.target.parentElement.previousElementSibling.lastChild.childNodes[0].value;
