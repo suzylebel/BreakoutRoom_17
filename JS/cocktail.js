@@ -1,16 +1,11 @@
-
 $( document ).ready(function() {
-
   var drinkIDs = [11001,11003,11006,11007,11008,11728,12196,11844,17198,17211,17255];
   var modalEl = $("#cocktail-modal");
   var btnEl = $("#find-cocktail");
   var containerEl = $("#cocktail-container");
-
   btnEl.on("click", function(event) {
     event.preventDefault();
-  
     var queryCtURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkIDs[randomIndex(drinkIDs.length)];
-
     $.ajax({ 
       url: queryCtURL,
       method: "GET"
@@ -20,12 +15,10 @@ $( document ).ready(function() {
         var info = cocktailData.drinks[0];
         modalEl.addClass("is-active"); 
         containerEl.empty();
-
         $("#cocktail-name").text(info.strDrink);
         if (info.strDrinkThumb) {
           $("#cocktail-thumbnail").attr("src", info.strDrinkThumb);
         }
-        
         var iList = $("<ul>");
         var ingr = [];
         ingr[0] = $("<li>").text(info.strMeasure1 + " " + info.strIngredient1);
@@ -63,37 +56,39 @@ $( document ).ready(function() {
         }
         containerEl.append(iList);
         containerEl.append("<br>");
-        
+        // display how-to if exists
         if (info.strInstructions) {
           var inst = $("<p>").text(info.strInstructions);
           containerEl.append(inst);
           containerEl.append("<br>");
         }
+        // display embedded video if exists
         if (info.strVideo) {
           var video = $("<iframe>");
+          var str = info.strVideo.split("=");
+          var videoURL = "https://www.youtube.com/embed/" + str[1];
           video.attr("width", "560");
           video.attr("height", "315");
-          video.attr("src", info.strVideo);
+          video.attr("src", videoURL);
           containerEl.append(video);
         }
-
-
     });
-
   })
-   
-   
-   
-  $(".close").click(function() {
-   
+  $("#close-modal").click(function() {
+    
     $("#cocktail-modal").removeClass("is-active");
-  
+
   });
+
+  $("#close-modal").click(function() {
+    
+    $("#food-modal").removeClass("is-active");
+
+  });
+
+
 
   function randomIndex(n) {
     return Math.floor(Math.random() * parseInt(n));
   }
-
-
-
 });
