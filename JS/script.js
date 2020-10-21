@@ -94,7 +94,7 @@ function nightPlannerTimeSlots() {
         saveButtonIcon.addClass("fas fa-glass-martini");
         saveButtonIcon.attr({
             "button-data-index": i,
-            style: "font-size:20px"
+            style: "font-size:25px"
         });
         // append the icon to the button
         saveButton.append(saveButtonIcon);
