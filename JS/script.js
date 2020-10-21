@@ -85,8 +85,11 @@ function nightPlannerTimeSlots() {
         }
         // saveButtonColumn
         let saveButton = $("<button>");
-        saveButton.addClass("column is-2 saveBtn");
-        saveButton.attr("button-data-index", i);
+        saveButton.addClass("column is-2 saveBtn save-button-slots");
+        saveButton.attr({
+            "button-data-index": i,
+            value: "save"
+        });
         let saveButtonIcon = $("<i>");
         saveButtonIcon.addClass("fas fa-glass-martini");
         saveButtonIcon.attr({
@@ -101,7 +104,7 @@ function nightPlannerTimeSlots() {
         $("#time-slots").append(newRow);
     }
     // save button event listener. this listener is put specifically on the button element so event delegation can be used to also handle if the user clicks on the icon, which is a child of the button element
-    $("button").on("click", saveButtonHandler);
+    $(".save-button-slots").on("click", saveButtonHandler);
 }
 // this function creates a notes section that will take user input and save it to localStorage when the save button is clicked
 function notesSection() {
@@ -133,7 +136,11 @@ function notesSection() {
     // saveButtonColumn
     let saveButton = $("<button>");
     saveButton.addClass("column is-2 saveBtn notesSlotRow");
-    saveButton.attr("button-data-index", "notes");
+    saveButton.attr({
+        "button-data-index": "notes",
+        id: "save-button",
+        value: "save"
+    });
     let saveButtonIcon = $("<i>");
     saveButtonIcon.addClass("fas fa-pizza-slice");
     saveButtonIcon.attr({
@@ -146,17 +153,16 @@ function notesSection() {
     notesRow.append(hourColumn, notesColumn, saveButton);
     // append the row to the div container for display to the user
     $("#notes").append(notesRow);
-    $("button").on("click", saveButtonHandler);
+    $("#save-button").on("click", saveButtonHandler);
 }
 // this function handles the click event, whether it be on the icon or the blue area around the icon. this function uses an if statement to determine what the user pressed (blue area or icon) and saves the user's input to local storage using DOM traversal
 function saveButtonHandler(event) {
     event.preventDefault();
-    console.log(event.target);
     if (event.target.matches("i")) {
         var buttonIndex = event.target.getAttribute("button-data-index");
         var textInput = event.target.parentElement.previousElementSibling.lastChild.childNodes[0].value;
         localStorage.setItem(buttonIndex, textInput);
-    } else if (event.target.matches("button")) {
+    } else if (event.target.value === "save") {
         var buttonIndex = event.target.getAttribute("button-data-index");
         var textInput = event.target.previousElementSibling.lastChild.childNodes[0].value;
         localStorage.setItem(buttonIndex, textInput);
