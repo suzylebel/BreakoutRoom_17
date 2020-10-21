@@ -75,8 +75,13 @@ $( document ).ready(function() {
     });
   })
   $("#close-modal").click(function() {
+    
     $("#cocktail-modal").removeClass("is-active");
+
   });
+
+
+
   function randomIndex(n) {
     return Math.floor(Math.random() * parseInt(n));
   }

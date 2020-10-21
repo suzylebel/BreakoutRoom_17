@@ -13,6 +13,8 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+            foodModal.addClass("is-active"); 
+            foodContainerEl.empty();
             console.log(response)
             recipeNameEl.html('<a href="' + response.meals[0].strYoutube + '" target=\*"_blank\*">' + response.meals[0].strMeal + '</a>');
             foodContainerEl.append(recipeNameEl);
@@ -20,10 +22,14 @@ $(document).ready(function () {
             foodContainerEl.append(mealPicEl);
             recipeSiteEl.html('<a href="' + response.meals[0].strSource + '" target=\*"_blank\*>Recipe Here!</a>');
             foodContainerEl.append(recipeSiteEl);
-            foodModal.addClass("is-active"); 
+            // foodModal.addClass("is-active"); 
+            
         })
     })
-    $("#close-modal").click(function() {
-        $("#cocktail-modal").removeClass("is-active");
+      $("#modal-close").click(function() {
+
+         $("#food-modal").removeClass("is-active");
+      
       });
+
 });
